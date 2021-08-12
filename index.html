@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script src="hamburger.js" defer></script>
+    <title>Reeniä</title>
+</head>
+<body>
+    <header class="main-header">
+        <div class="logo-and-hamburger">
+            <div class="bars">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+            <a href="#">
+                <img src="images/logo.png" alt="logo" class="brand-logo filter-white">
+            </a>
+        </div>
+        <div class="search-bar">
+            <form id="search-bar-form">
+                <input id="search-bar-input" type="search" placeholder="Search...">
+                <button type="submit" class="search-icon">
+                    <img src="images/magnify.svg" alt="search-icon">
+                </button>
+            </form>
+            <div class="voice-search-icon-wrapper">
+                <div id="voice-search-icon" data-tooltip-voice="search with your voice" class="voice-search">
+                    <img src="images/mic_black_24dp.svg" alt="mircophone" class="filter-white">
+                </div>
+            </div>
+        </div>
+        <div class="icons">
+            <div style="order: 3;" data-tooltip-create="Create" class="icon create-icon hidden">
+                <img class="filter-white"  src="images/video-plus.svg" alt="">
+                <div class="create-dropdown drop">
+                    <div class="create-row">
+                        <a href="#">
+                            <img class="filter-gray" src="images/live_tv_black_24dp.svg" alt="">
+                            <span>Upload video</span>
+                        </a>
+                    </div>
+                    <div class="create-row">
+                        <a href="#">
+                            <img  class="filter-gray" src="images/stream_black_24dp.svg" alt="">
+                            <span>Go live</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div style="order: 4;" data-tooltip-apps="Youtube apps" class="icon apps-icon hidden">
+                <img class="filter-white" src="images/apps.svg" alt="">
+                <div class="apps-dropdown drop">
+                    <div class="apps-section drop">
+                        <div class="apps-row">
+                            <a href="#">
+                                <img src="images/youtube-logo-2431.svg" alt="">
+                                <span>Upload video</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="apps-section drop">
+                        <div class="apps-row">
+                            <a href="#">
+                                <img src="images/youtube-logo-2431.svg" alt="">
+                                <span>Go live</span>
+                            </a>                           
+                        </div>
+                        <div class="apps-row">
+                            <a href="#">
+                                <img src="images/youtube-logo-2431.svg" alt="">
+                                <span>Upload video</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="apps-seciton drop">
+                        <div class="apps-row">
+                            <a href="#">
+                                <img   src="images/youtube-logo-2431.svg" alt="">
+                                <span>Go live</span>
+                            </a>
+                        </div>
+                        <div class="apps-row">
+                            <a href="#">
+                                <img src="images/youtube-logo-2431.svg" alt="">
+                                <span>Go live</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div style="order: 5;" data-tooltip-notify="Notifications" class="icon notify-icon">
+                <img class="filter-white notify" src="images/bell.svg" alt="">
+            </div>
+            <div id="profile-pic" style="order: 6;" class="icon">
+                <a href="#">
+                    <div class="channel-icon"></div>
+                </a>
+            </div>
+        </div>
+    </header>
+    <div class="fixed-profile-pop-up dropdown hidden">
+        <div class="profile-information">
+            <div class="profile-picture"></div>
+            <div class="profile-name">
+                <h4>Profile Name</h4>
+                <a href="#">Manage your Google Account</a>
+            </div>
+        </div>
+        <div class="channel-links">
+            <nav>
+                <ul>
+                    <li>
+                        <a href="#">
+                            <img class="filter-gray" src="images/account_circle_black_24dp.svg" alt="">
+                            <p>Your channel</p> 
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img class="filter-gray" src="images/monetization_on_black_24dp.svg" alt="">
+                           <p>Purchases and memberships</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img class="filter-gray" src="images/settings_black_24dp.svg" alt="">
+                            <p>Youtube Studio</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img class="filter-gray" src="images/switch_account_black_24dp.svg" alt="">
+                            <p>Switch account</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img class="filter-gray" src="images/logout_black_24dp.svg" alt="">
+                            <p>Sign out</p>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div class="channel-settings">
+            <nav>
+                <ul>
+                    <li>
+                        <a href="#">
+                            <img class="filter-gray" src="images/brightness_6_black_24dp.svg" alt="">
+                            <p>Appereance: Dark</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img class="filter-gray" src="images/translate_black_24dp.svg" alt="">
+                            <p>Language: English</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img class="filter-gray" src="images/location_black_24dp.svg" alt="">
+                            <p>Location: unknown</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img class="filter-gray" src="images/settings_black_24dp.svg" alt="">
+                            <p>Settings</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img class="filter-gray" src="images/data_good_black_24dp.svg" alt="">
+                            <p>Your data in Youtube</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img class="filter-gray" src="images/help_black_24dp.svg" alt="">
+                            <p>Help</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img class="filter-gray" src="images/feedback_black_24dp.svg" alt="">
+                            <p>Send feedback</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img class="filter-gray" src="images/keyboard_black_24dp.svg" alt="">
+                            <p>Keyboard shortcuts</p>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div class="channel-mode-option">
+            <nav>
+                <ul>
+                    <li>
+                        <a href="#">
+                            <p>Restricted Mode: Off</p>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+    <div class="notification-pop-up dropdown hidden">
+        <div class="notification-header">
+            <div class="title">
+                <span>Notifications</span>
+            </div>
+            <div class="settings-icon-wrapper">
+                <img class="filter-gray" src="images/settings_black_24dp.svg" alt="settings-icon">
+            </div>
+        </div>
+        <div class="notification-section">
+            <a href="#">
+                <div class="channel-image"></div>
+                <div class="video-information">
+                    <p>
+                        Channel x uploaded video:<br> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit, tempora?
+                    </p>
+                    <span>16hours ago</span>
+                </div>
+                <div class="video-image"></div>
+                <div class="expand-dots">
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                </div>
+            </a>
+            <a href="#">
+                <div class="channel-image"></div>
+                <div class="video-information">
+                    <p>
+                        Channel x uploaded video:<br> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit, tempora?
+                    </p>
+                    <span>16hours ago</span>
+                </div>
+                <div class="video-image"></div>
+                <div class="expand-dots">
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                </div>
+            </a>
+            <a href="#">
+                <div class="channel-image"></div>
+                <div class="video-information">
+                    <p>
+                        Channel x uploaded video:<br> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit, tempora?
+                    </p>
+                    <span>16hours ago</span>
+                </div>
+                <div class="video-image"></div>
+                <div class="expand-dots">
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                </div>
+            </a>
+            <a href="#">
+                <div class="channel-image"></div>
+                <div class="video-information">
+                    <p>
+                        Channel x uploaded video:<br> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit, tempora?
+                    </p>
+                    <span>16hours ago</span>
+                </div>
+                <div class="video-image"></div>
+                <div class="expand-dots">
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                </div>
+            </a>
+            <a href="#">
+                <div class="channel-image"></div>
+                <div class="video-information">
+                    <p>
+                        Channel x uploaded video:<br> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit, tempora?
+                    </p>
+                    <span>16hours ago</span>
+                </div>
+                <div class="video-image"></div>
+                <div class="expand-dots">
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                </div>
+            </a>
+            <a href="#">
+                <div class="channel-image"></div>
+                <div class="video-information">
+                    <p>
+                        Channel x uploaded video:<br> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Commodi, dignissimos.
+                    </p>
+                    <span>16hours ago</span>
+                </div>
+                <div class="video-image"></div>
+                <div class="expand-dots">
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                </div>
+            </a>
+        </div>
+    </div>
+    <div class="intrest-buttons">
+        <div class="container sidenav-margin">
+            <button class="active">intrest 1</button>
+            <button>intrest 2</button>
+            <button>intrest 3</button>
+            <button>intrest 4</button>
+            <button>intrest 5</button>
+            <button>intrest 6</button>
+            <button>intrest 7</button>
+            <button>intrest 8</button>
+            <button>intrest 9</button>
+            <button>intrest 1</button>
+            <button>intrest 2</button>
+            <button>intrest 3</button>
+            <button>intrest 4</button>
+            <button>intrest 5</button>
+            <button>intrest 6</button>
+            <button>intrest 7</button>
+            <button>intrest 8</button>
+            <button>intrest 9</button>
+            <button>intrest 1</button>
+            <button>intrest 2</button>
+            <button>intrest 3</button>
+            <button>intrest 4</button>
+            <button>intrest 5</button>
+            <button>intrest 6</button>
+            <button>intrest 7</button>
+            <button>intrest 8</button>
+            <button>intrest 9</button>
+        </div>
+    </div>
+    <div class="fixed-sidenav">
+        <nav class="sidenav-links">
+            <ul>
+                <li class="home-link">
+                    <a class="active" href="#">
+                        <img class="filter-white" src="images/home_black_24dp.svg" alt="bell-icon">
+                        <p>Home</p>
+                    </a>
+                </li>
+                <li class="discover-link">
+                    <a href="#">
+                        <img class="filter-gray" src="images/explore_black_24dp.svg" alt="bell-icon">
+                        <p>Explore</p>
+                    </a>
+                </li>
+                <li class="subs-link">
+                    <a href="#">
+                        <img class="filter-gray" src="images/subscriptions_black_24dp.svg" alt="bell-icon">
+                        <p>Subscirption</p>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <nav class="sidenav-links">
+            <ul>
+                <li class="home-link">
+                    <a href="#">
+                        <img class="filter-gray" src="images/video_library_black_24dp.svg" alt="bell-icon">
+                        <p>Library</p>
+                    </a>
+                </li>
+                <li class="discover-link">
+                    <a href="#">
+                        <img class="filter-gray" src="images/history_black_24dp.svg" alt="bell-icon">
+                        <p>History</p>
+                    </a>
+                </li>
+                <li class="subs-link">
+                    <a href="#">
+                        <img class="filter-gray" src="images/smart_display_black_24dp.svg" alt="bell-icon">
+                        <p>Your Videos</p>
+                    </a>
+                </li>
+                <li class="discover-link">
+                    <a href="#">
+                        <img class="filter-gray" src="images/watch_later_black_24dp.svg" alt="bell-icon">
+                        <p>Watch later</p>
+                    </a>
+                </li>
+                <li class="subs-link">
+                    <a href="#">
+                        <img class="filter-gray" src="images/thumb_up_alt_black_24dp.svg" alt="bell-icon">
+                        <p>Liked videos</p>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <nav class="sidenav-links">
+            <h3>SUBSCRIPTIONS</h3>
+            <ul>
+                <li class="subscription-row">
+                    <a href="#">
+                        <div class="subscriction-channel-icon-wrapper">
+                            <div class="subscription-channel-icon"></div>
+                        </div>
+                        <p>Subscription 1</p>
+                    </a>
+                </li>
+                <li class="subscription-row">
+                    <a href="#">
+                        <div class="subscriction-channel-icon-wrapper">
+                            <div class="subscription-channel-icon"></div>
+                        </div>
+                        <p>Subscription 2</p>
+                    </a>
+                </li>
+                <li class="subscription-row">
+                    <a href="#">
+                        <div class="subscriction-channel-icon-wrapper">
+                            <div class="subscription-channel-icon"></div>
+                        </div>
+                        <p>Subscription 3</p>
+                    </a>
+                </li>
+                <li class="subscription-row">
+                    <a href="#">
+                        <div class="subscriction-channel-icon-wrapper">
+                            <div class="subscription-channel-icon"></div>
+                        </div>
+                        <p>Subscription 4</p>
+                    </a>
+                </li>
+                <li class="subscription-row">
+                    <a href="#">
+                        <div class="subscriction-channel-icon-wrapper">
+                            <div class="subscription-channel-icon"></div>
+                        </div>
+                        <p>Subscription 5</p>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <nav class="sidenav-links">
+            <h3>MORE FROM YOUTUBE</h3>
+            <ul>
+                <li class="home-link">
+                    <a href="#">
+                        <img class="filter-gray" src="images/video_library_black_24dp.svg" alt="bell-icon">
+                        <p>Youtube Prerium</p>
+                    </a>
+                </li>
+                <li class="discover-link">
+                    <a href="#">
+                        <img class="filter-gray" src="images/history_black_24dp.svg" alt="bell-icon">
+                        <p>Movies</p>
+                    </a>
+                </li>
+                <li class="subs-link">
+                    <a href="#">
+                        <img class="filter-gray" src="images/smart_display_black_24dp.svg" alt="bell-icon">
+                        <p>Gaming</p>
+                    </a>
+                </li>
+                <li class="discover-link">
+                    <a href="#">
+                        <img class="filter-gray" src="images/watch_later_black_24dp.svg" alt="bell-icon">
+                        <p>Live</p>
+                    </a>
+                </li>
+                <li class="subs-link">
+                    <a href="#">
+                        <img class="filter-gray" src="images/thumb_up_alt_black_24dp.svg" alt="bell-icon">
+                        <p>Sports</p>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <nav class="sidenav-links">
+            <ul>
+                <li class="home-link">
+                    <a href="#">
+                        <img class="filter-gray" src="images/settings_black_24dp.svg" alt="bell-icon">
+                        <p>Settings</p>
+                    </a>
+                </li>
+                <li class="discover-link">
+                    <a href="#">
+                        <img class="filter-gray" src="images/flag_black_24dp.svg" alt="bell-icon">
+                        <p>Report history</p>
+                    </a>
+                </li>
+                <li class="subs-link">
+                    <a href="#">
+                        <img class="filter-gray" src="images/help_black_24dp.svg" alt="bell-icon">
+                        <p>Help</p>
+                    </a>
+                </li>
+                <li class="discover-link">
+                    <a href="#">
+                        <img class="filter-gray" src="images/feedback_black_24dp.svg" alt="bell-icon">
+                        <p>Send feedback</p>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <div class="sidenav-additional-links">
+            <div class="additional-links">
+                <nav class="link-row">
+                    <ul>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Press</a></li>
+                        <li><a href="#">Copyright</a></li>
+                    </ul>
+                </nav>
+                <nav class="link-row">
+                    <ul>
+                        <li><a href="#">Contact us</a></li>
+                        <li><a href="#">Creators</a></li>
+                    </ul>
+                </nav>
+                <nav class="link-row">
+                    <ul>
+                        <li><a href="#">Advertise</a></li>
+                        <li><a href="#">Developers</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="additional-links">
+                <nav class="link-row">
+                    <ul>
+                        <li><a href="#">Terms</a></li>
+                        <li><a href="#">Privacy</a></li>
+                        <li><a href="#">Policy & Safety</a></li>
+                    </ul>
+                </nav>
+                <nav class="link-row">
+                    <ul>
+                        <li><a href="#">How  Youtube Works</a></li>
+                    </ul>
+                </nav>
+                <nav class="link-row">
+                    <ul>
+                        <li><a href="#">Test new features</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <div class="copyright">&#169; 2021 Google LLC</div>
+    </div>
+    <div class="video-section">
+        <div class="videos-container grid">
+            <div class="video">
+                <div class="thumbnail">
+                </div>
+                <div class="video-bottom-section">
+                    <a class="channel-image-wrapper" href="#">
+                        <div class="channel-image"></div>
+                    </a>
+                    <div class="video-metadata">
+                        <a href="#">
+                            <h1 class="video-title">Video Title</h1>
+                        </a>
+                        <a href="#">
+                            <p class="channel-name">Channel</p>
+                        </a>
+                        <a href="#">
+                            <p class="video-views">39K Views</p>
+                        </a>
+                        <a href="#">
+                            <p class="video-release-date">7 months ago</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="video">
+                <div class="thumbnail">
+                </div>
+                <div class="video-bottom-section">
+                    <a class="channel-image-wrapper" href="#">
+                        <div class="channel-image"></div>
+                    </a>
+                    <div class="video-metadata">
+                        <a href="#">
+                            <h1>Video Title</h1>
+                        </a>
+                        <a href="#">
+                            <p class="channel-name">Channel</p>
+                        </a>
+                        <a href="#">
+                            <p class="video-views">39K Views</p>
+                        </a>
+                        <a href="#">
+                            <p class="video-release-date">7 months ago</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="video">
+                <div class="thumbnail">
+                </div>
+                <div class="video-bottom-section">
+                    <a class="channel-image-wrapper" href="#">
+                        <div class="channel-image"></div>
+                    </a>
+                    <div class="video-metadata">
+                        <a href="#">
+                            <h1>Video Title</h1>
+                        </a>
+                        <a href="#">
+                            <p class="channel-name">Channel</p>
+                        </a>
+                        <a href="#">
+                            <p class="video-views">39K Views</p>
+                        </a>
+                        <a href="#">
+                            <p class="video-release-date">7 months ago</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="video">
+                <div class="thumbnail">
+                </div>
+                <div class="video-bottom-section">
+                    <a class="channel-image-wrapper" href="#">
+                        <div class="channel-image"></div>
+                    </a>
+                    <div class="video-metadata">
+                        <a href="#">
+                            <h1>Video Title</h1>
+                        </a>
+                        <a href="#">
+                            <p class="channel-name">Channel</p>
+                        </a>
+                        <a href="#">
+                            <p class="video-views">39K Views</p>
+                        </a>
+                        <a href="#">
+                            <p class="video-release-date">7 months ago</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="video">
+                <div class="thumbnail">
+                </div>
+                <div class="video-bottom-section">
+                    <a class="channel-image-wrapper" href="#">
+                        <div class="channel-image"></div>
+                    </a>
+                    <div class="video-metadata">
+                        <a href="#">
+                            <h1>Video Title</h1>
+                        </a>
+                        <a href="#">
+                            <p class="channel-name">Channel</p>
+                        </a>
+                        <a href="#">
+                            <p class="video-views">39K Views</p>
+                        </a>
+                        <a href="#">
+                            <p class="video-release-date">7 months ago</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

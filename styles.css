@@ -1,0 +1,1033 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+*, *::after, *::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    color: white;
+    font-family: Roboto, sans-serif;
+    
+}
+
+body {
+    background: hsl(0, 0%, 17%);
+}
+
+.video-section {
+    background: #333;
+    min-height: 100vh;
+    /* For the fixed header and buttons row */
+    margin-top: 120px;
+    /* For fixed sidenav */
+    margin-left: 250px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 1rem;
+    margin: 0 2rem;
+    padding: 3rem 0;
+}
+
+/* When only one video it is too large ----- add little padding to the sides */
+
+@media (max-width: 600px) {
+    .grid {
+        margin: 0 5.5rem;
+    }
+}
+
+/* VIDEO STYLES */
+ 
+.video {
+    display: flex;
+    flex-direction: column;
+}
+
+.video-bottom-section {
+    display: flex;
+    margin-top: .5rem;
+}
+
+.video-metadata {
+    display: flex;
+    flex-direction: column;
+}
+
+.channel-image {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background-image: url(images/Illustration\ 1.jpg);
+    background-position: 0 -3rem;
+    background-size: cover;
+}
+
+.video img {
+    width: 100%;
+    height: 200px;
+}
+
+.thumbnail {
+    width: 100%;
+    height: 200px;
+    background-image: url('images/Illustration\ 1.jpg');
+    background-size: cover;
+    background-position: 0 -3rem;
+}
+
+.video-bottom-section .video-metadata { 
+    margin-left: .75rem;
+}
+
+.video-metadata a {
+    text-decoration: none;
+}
+
+.video-metadata a:hover > * {
+    color: hsl(0, 0%, 65%);;
+}
+
+.video-metadata h1 {
+    margin-bottom: .25rem;
+    font-size: 1.5rem;
+}
+
+.video-metadata .channel-name,
+.video-metadata .video-views,
+.video-metadata .video-release-date {
+    color: hsl(0, 0%, 80%);
+    font-size: 1.1rem;
+}
+
+/* ---------------------------  HEADER STYLES -------------------- */
+
+.main-header {
+    /* making sure that tooltips dont go under buttons row */
+    z-index: 1;
+    position: fixed;
+    background: hsl(0, 0%, 17%);
+    left: 0;
+    right: 0;
+    top: 0;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.main-header img {
+    width: 120px;
+}
+
+.main-header .logo-and-hamburger {
+    display: flex;
+    align-items: center;
+}
+
+.main-header .bars {
+    position: relative;
+    width: 25px;
+    height: 25px;
+    margin: 0 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.main-header .bar {
+    background: white;
+    width: 100%;
+    height: 4px;
+    border-radius: 500px;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+}
+
+.search-bar form {
+    display: flex;
+}
+
+.main-header form button img {
+    width: 20px;
+    height: 20px;
+}
+
+.main-header form button {
+    padding: .25rem 1rem;
+    border: none;
+    background: none;
+    outline: none;
+    background-color: hsl(0, 0%, 22%);
+    border-radius: 3px;
+    border-left: 1px solid transparent;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    cursor: pointer;
+}
+
+.main-header form button:hover {
+    background-color: hsl(0, 0%, 26%);
+}
+
+.main-header form input {
+    padding: .25rem 1rem;
+    border-radius: 3px;
+    outline: none;
+    border: none;
+    background: none;
+    background-color: hsl(0, 0%, 12%);
+    color: inherit;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    width: 25vw;
+    font-size: .95rem;
+}
+
+.main-header form input:focus {
+    border: 1px solid rgb(62, 62, 255); 
+}
+
+.search-bar img {
+    width: 1.5rem;
+}
+
+.search-bar .voice-search {
+    display: flex;
+    justify-content: flex-start;
+    align-content: center;
+    margin-left: .5rem;
+    cursor: pointer;
+    background-color: #222;
+    border-radius: 50%;
+    padding: .4rem;
+    border: 1px transparent solid;
+}
+
+.icons {
+    position: relative;
+    display: flex;
+    padding-right: 1.5rem;
+    align-items: center;
+}
+
+.icon {
+    margin-right: .75rem;
+    border: 1px solid transparent;
+    cursor: pointer;
+}
+
+/* #voice-search-icon {
+    position: relative;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     border-radius: 50%;
+     padding: .4rem;
+} */
+
+.icon:last-child {
+    margin-right: 0;
+}
+
+.icon img {
+    width: 1.75rem;
+}
+
+.icon .channel-icon {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background-image: url(images/Illustration\ 1.jpg);
+    background-position: 0 -3rem;
+    background-size: cover;
+}
+
+/* --------------------------------------------------------------------- */
+
+/* SVG COLORS */
+.filter-white {
+    filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(7466%) hue-rotate(354deg) brightness(106%) contrast(112%);
+}
+
+.filter-gray {
+    filter: invert(56%) sepia(0%) saturate(502%) hue-rotate(203deg) brightness(90%) contrast(77%);
+}
+
+/* --------------------------------------------------------------------- */
+
+ /* Intrest buttons */
+.intrest-buttons .container{
+    position: fixed;
+    top: 60px;
+    background: hsl(0, 0%, 17%);
+    /* For fixed sidenav */
+    left: 250px;
+    right: 0;
+    height: 60px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    border-top: 1px solid hsl(0, 0%, 40%);
+    border-bottom: 1px solid hsl(0, 0%, 40%);
+    overflow: hidden;
+}
+
+.intrest-buttons .active {
+    color: black;
+    background: hsl(0, 0%, 100%);
+}
+
+.intrest-buttons button {
+    all: initial;
+    color: inherit;
+    cursor: pointer;
+    background: hsl(0, 0%, 30%);
+    padding: .5rem .75rem;
+    border-radius: 500px;
+    font-size: 1rem;
+    margin-right: 1rem;
+    min-width: 66px;
+    text-align: center;
+    font-weight: 500;
+}
+
+.intrest-buttons button:first-child {
+    margin-left: 1rem;
+}
+
+.intrest-buttons button:hover:not(.active) {
+    background: hsl(0, 0%, 40%);
+}
+
+/* --------------------------------------------------------------------- */
+
+
+/* --------------------  FIXED SIDENAV STYLES  -------------------- */
+
+/* Custom scroll bar Chrome */
+
+.fixed-sidenav::-webkit-scrollbar,
+.notification-pop-up::-webkit-scrollbar {
+    display: block;
+    width: 8px;
+}
+
+.fixed-sidenav::-webkit-scrollbar-track,
+.notification-pop-up::-webkit-scrollbar-track {
+    background: transparent;
+} 
+
+.fixed-sidenav::-webkit-scrollbar-thumb,
+.notification-pop-up::-webkit-scrollbar-thumb {
+    background: gray;
+    border-radius: 10px;
+   
+}
+
+.fixed-sidenav::-webkit-scrollbar-track-piece:start,
+.notification-pop-up::-webkit-scrollbar-track-piece:start {
+    background: transparent;
+    margin-top: 10px; 
+}
+
+.fixed-sidenav::-webkit-scrollbar-track-piece:end,
+.notification-pop-up::-webkit-scrollbar-track-piece:end {
+    background: transparent;
+    margin-bottom: 10px; 
+}
+    
+.fixed-sidenav {
+    position: fixed;
+    /* For search bar height */
+    top: 60px;
+    left: 0;
+    bottom: 0;
+    width: 250px;
+    padding-right: 1rem;
+    background: hsl(0, 0%, 18%);
+    max-height: 100vh;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    /* Custom scroll For firefox */
+    scrollbar-width: thin;
+}
+
+
+.fixed-sidenav:hover {
+    overflow-y: auto;
+}
+
+.fixed-sidenav.hidden {
+    display: none;
+}
+
+.sidenav-links {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-bottom: 1px solid hsl(0, 0%, 40%);
+    padding: .5rem 0;
+}
+
+.fixed-sidenav ul {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    list-style: none;
+    font-size: 1.2rem;
+}
+
+.fixed-sidenav .active {
+    font-weight: bold;
+}
+
+.fixed-sidenav .active,
+.fixed-sidenav a:hover,
+.channel-links a:hover,
+.channel-settings a:hover,
+.channel-mode-option a:hover,
+.notification-section a:hover,
+.create-dropdown a:hover,
+.apps-dropdown .apps-row a:hover  {
+    background: hsl(0, 0%, 30%);
+}
+
+.fixed-sidenav li {
+    display: flex;
+}
+
+.fixed-sidenav a {
+    /* Make the links take 100% of the sidenav width */
+    /* Flex-item */
+    flex-grow: 1;
+    text-decoration: none;
+    padding: .8rem 1rem;
+    /* Flex-container  */
+    display: flex;
+}
+
+.fixed-sidenav a img {
+    width: 1em;
+    margin-right: 1rem;
+}
+
+.subscriction-channel-icon-wrapper {
+    margin-right: 1rem;
+}
+
+.sidenav-links .subscription-row p{
+    font-size: 1.1rem;
+}
+
+.sidenav-links .subscription-row a {
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+}
+
+.subscription-channel-icon {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background-image: url(images/Illustration\ 1.jpg);
+    background-position: 0 -3rem;
+    background-size: cover;
+}
+
+.sidenav-links h3 {
+    color: hsl(0, 0%, 75%);
+    font-size: 1rem;
+    padding-left: 1rem;
+    font-weight: bold;
+    margin: .5rem 0;
+}
+
+.sidenav-additional-links {
+    margin-right: -1.5rem;
+}
+
+.additional-links {
+    padding: 0.5rem;
+    margin-right: none;
+}
+
+.additional-links .link-row ul{
+    display: flex;
+    flex-direction: row;
+}
+
+.additional-links .link-row a {
+    font-size: .9rem;
+    padding: 0;
+    padding: .1rem 0.4rem;
+    color: hsl(0, 0%, 60%);
+}
+
+.additional-links .link-row a:hover {
+    background: none;
+}
+
+.copyright {
+    padding: .5rem;
+    color: hsl(0, 0%, 38%);
+    font-size: .85rem;
+}
+
+@media (max-width: 750px) {
+    .main-header form input {
+        width: 12vw;
+        padding-right: 0;
+    }
+}
+
+@media (max-width: 650px) {
+    .main-header .search-bar {
+        display: none;
+    }
+}
+
+/* ------------------------------------------------------------------------------------ */
+
+/*  ------------------------------ TOOLTIPS  ------------------------------------------ */
+
+.voice-search-icon-wrapper {
+    position: relative;
+    
+}
+
+#voice-search-icon {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    padding: .4rem;
+}
+
+#voice-search-icon::before {
+    /* Variables */
+    color: white;
+    position: absolute;
+    display: block;
+    left: 50%;
+    bottom: -1rem;
+    transform: translateX(var(--translate-x, -50%)) translateY(var(--translate-y, 100%)) scale(var(--scale, 0));
+    content: attr(data-tooltip-voice);
+    padding: .5rem 1rem;
+    border-radius: 5px;
+    background: hsl(0, 0%, 40%);
+    width: max-content;
+
+    /* Animation */
+    transition: transform 50ms ease-in;  
+}
+
+#voice-search-icon:hover::before {
+    --scale: 1;
+}
+
+#search-icon {
+    position: relative;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     border-radius: 50%;
+     padding: .4rem;
+}
+
+#search-icon::before {
+   /* Variables */
+   --scale: 0;
+   color: white;
+   position: absolute;
+   left: 50%;
+   bottom: -1rem;
+   transform: translateX(var(--translate-x, -50%)) translateY(var(--translate-y, 100%)) scale(var(--scale, 0));
+   content: 'Search';
+   padding: .5rem 1rem;
+   border-radius: 5px;
+   background: hsl(0, 0%, 40%);
+   width: max-content;
+
+   /* Animation */
+   transition: transform 50ms ease-in;  
+}
+
+#search-icon:hover::before {
+   --scale: 1;
+}
+
+.create-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    border-radius: 50%;
+    padding: .4rem;
+    transition: background-color 100ms ease-out;
+}
+
+.create-icon::before {
+    /* Variables */
+    --scale: 0;
+    color: white;
+    position: absolute;
+    left: 50%;
+    bottom: -1rem;
+    transform: translateX(-50%) translateY(100%) scale(var(--scale));
+    content: attr(data-tooltip-create);
+    padding: .5rem 1rem;
+    border-radius: 5px;
+    background: hsl(0, 0%, 40%);
+    width: max-content;
+ 
+    /* Animation */
+    transition: transform 50ms ease-in;  
+ }
+ 
+ .create-icon:hover::before {
+    --scale: 1;
+ }
+ 
+ .create-dropdown {
+     --create-dropdown-height: 88px;
+     position: absolute;
+     bottom: calc(-1 * var(--create-dropdown-height));
+     left: 10%;
+     width: 180px;
+     background-color: hsl(0, 0%, 15%);
+     display: flex;
+     flex-direction: column;
+     padding: .25rem 0;
+ }
+
+ .create-icon.hidden .create-dropdown {
+    display: none;
+ }
+
+ .apps-icon.hidden .apps-dropdown {
+     display: none;
+ }
+
+ .create-dropdown .create-row a,
+ .apps-dropdown .apps-row a {
+     display: flex;
+     width: 100%;
+     align-items: center;
+     padding: .5rem;
+     text-decoration: none;
+     font-weight: 500;
+ }
+
+ .apps-dropdown .apps-row a {
+     padding: .6rem;
+ }
+
+ .apps-section {
+    border-bottom: 1px solid hsl(0, 0%, 40%);
+    padding: .25rem 0; 
+ }
+
+ .create-dropdown img,
+ .apps-dropdown img  {
+     margin-right: .75rem;
+     width: 1.4rem;
+ }
+
+ .apps-dropdown {
+    --create-dropdown-height: 240px;
+    position: absolute;
+    bottom: calc(-1 * var(--create-dropdown-height));
+    right: -5%;
+    width: 220px;
+    background-color: hsl(0, 0%, 15%);
+    display: flex;
+    flex-direction: column;
+    padding: .25rem 0;
+    border-radius: 2px;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    border: 1px solid hsl(0, 0%, 40%, .4);
+ }
+
+
+ .apps-icon {
+     position: relative;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     border-radius: 50%;
+     padding: .4rem;
+ }
+
+ .apps-icon::before {
+    /* Variables */
+    --scale: 0;
+    color: white;
+    position: absolute;
+    left: 50%;
+    bottom: -1rem;
+    transform: translateX(-50%) translateY(100%) scale(var(--scale));
+    content: attr(data-tooltip-apps);
+    padding: .5rem 1rem;
+    border-radius: 5px;
+    background: hsl(0, 0%, 40%);
+    width: max-content;
+ 
+    /* Animation */
+    transition: transform 50ms ease-in;  
+ }
+ 
+ .apps-icon:hover::before {
+    --scale: 1;
+ }
+
+.notify-icon {
+    position: relative;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    padding: .4rem;
+
+}
+
+ .notify-icon::before {
+    /* Variables */
+    --scale: 0;
+    color: white;
+    position: absolute;
+    left: 50%;
+    bottom: -1rem;
+    transform: translateX(-50%) translateY(100%) scale(var(--scale));
+    content: attr(data-tooltip-notify);
+    padding: .5rem 1rem;
+    border-radius: 5px;
+    background: hsl(0, 0%, 40%);
+    width: max-content;
+ 
+    /* Animation */
+    transition: transform 50ms ease-in;  
+ }
+ 
+ .notify-icon:hover::before {
+    --scale: 1;
+ }
+
+.search-icon {
+    position: relative;
+}
+
+#back-arrow-icon-wrapper {
+    position: relative;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     border-radius: 50%;
+     padding: .4rem;
+     width: 2.75rem;
+     height: 2.75rem;
+     margin: 0 .25rem;
+}
+
+#back-arrow-icon-wrapper img {
+    width: 1.5em;
+    height: 1.5em;
+}
+
+#back-arrow-icon-wrapper::before {
+   /* Variables */
+   --scale: 0;
+   color: white;
+   position: absolute;
+   left: 50%;
+   bottom: -1rem;
+   transform: translateX(-50%) translateY(100%) scale(var(--scale));
+   content: 'Back';
+   padding: .5rem 1rem;
+   border-radius: 5px;
+   background: hsl(0, 0%, 40%);
+   width: max-content;
+
+   /* Animation */
+   transition: transform 50ms ease-in;  
+}
+
+#back-arrow-icon-wrapper:hover::before {
+   --scale: 1;
+}
+
+ .search-icon::before {
+    /* Variables */
+    --scale: 0;
+    color: white;
+    position: absolute;
+    left: 50%;
+    bottom: -1rem;
+    transform: translateX(-50%) translateY(100%) scale(var(--scale));
+    content: 'Search';
+    padding: .5rem 1rem;
+    border-radius: 5px;
+    background: hsl(0, 0%, 40%);
+    width: max-content;
+ 
+    /* Animation */
+    transition: transform 50ms ease-in;  
+ }
+ 
+ .search-icon:hover::before {
+    --scale: 1;
+ }
+
+ /* --------------------------------------------------------------------------- */
+
+/* --------------------------- PROFILE POP UP STYLES ------------------------ */
+
+.fixed-profile-pop-up {
+    position: fixed;
+    background-color: hsl(0, 0%, 15%);
+    /* Sits right under user profile */
+    top: 50px;
+    right: .75rem;
+    width: 300px;
+    min-height: 500px;
+    z-index: 1;
+    border: 1px solid hsl(0, 0%, 55%);
+    border-radius: 1px;
+}
+
+.fixed-profile-pop-up.hidden {
+
+    display: none;
+}
+
+.channel-links,
+.profile-information,
+.channel-settings,
+.channel-mode-option {
+    border-bottom: 1px solid hsl(0, 0%, 40%);
+    padding-bottom: .5rem;
+    padding-top: .5rem;
+}
+
+.profile-information {
+    display: flex;
+    padding: .8rem;
+}
+
+.profile-picture {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background-image: url(images/Illustration\ 1.jpg);
+    background-position: 0 -3rem;
+    background-size: cover;
+    margin-right: .75rem;
+}
+
+.profile-name h4 {
+    margin-bottom: .25rem; 
+}
+
+.profile-information .profile-name a {
+    text-decoration: none;
+    color: rgb(87, 87, 253); 
+}
+
+.channel-links ul,
+.channel-settings ul,
+.channel-mode-option ul {
+    list-style: none;
+}
+
+.channel-links li
+.channel-settings li,
+.channel-mode-option li {
+    display: flex;
+}
+
+.channel-links a,
+.channel-settings a,
+.channel-mode-option a {
+    /* Flex-item */
+    flex-grow: 1;
+    padding: .8rem;
+    text-decoration: none;
+    font-size: 1.1rem;
+    /* Flex container */
+    display: flex;
+    align-items: center;
+}
+
+.channel-links a p,
+.channel-settings a p,
+.channel-mode-option a p {
+    color: hsl(0, 0%, 80%);
+}
+
+.channel-links a img,
+.channel-settings a img {
+    margin-right: .8rem;
+}
+
+/* --------------------------------------------------------------------------- */
+
+/* --------------------------- NOTIFICATION POP UP STYLES ------------------------ */
+
+.notification-pop-up {
+    position: fixed;
+    background-color: hsl(0, 0%, 15%);
+    /* Sits right under user profile */
+    top: 50px;
+    right: 80px;
+    width: 480px;
+    min-height: 500px;
+    z-index: 1;
+    border: 1px solid hsl(0, 0%, 55%);
+    border-radius: 1px;
+    display: flex;
+    flex-direction: column;
+    max-height: 75vh;
+    overflow-y: hidden;
+    overflow-x: hidden;
+     /* Custom scroll For firefox */
+     scrollbar-width: thin;
+}
+
+.notification-pop-up:hover {
+    overflow-y: auto;
+}
+
+.notification-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 480px;
+}
+
+.notification-pop-up.hidden {
+    display: none;
+}
+
+
+
+.notification-pop-up .title {
+    padding: .75rem;
+    font-weight: 400;
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+}
+
+.notification-pop-up .settings-icon-wrapper {
+    padding: 1rem;
+}
+
+.notification-section {
+    /* Flex item */
+    flex-grow: 1;
+    /* Flex container */
+    display: flex;
+    flex-direction: column;
+    width: 480px;
+    border-top: 1px solid hsl(0, 0%, 40%);
+}
+
+.notification-section a {
+    position: relative;
+    padding: 1rem;
+    padding-right: 3rem;
+    display: flex;
+    text-decoration: none;
+}
+
+.notification-section .channel-image {
+    position: relative;
+    min-width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background-image: url(images/Illustration\ 1.jpg);
+    background-position: 0 -4rem;
+    background-size: cover;
+    margin-right: .75rem;
+}
+
+.channel-image::before {
+    position: absolute;
+    display: block;
+    content: '\00B7';
+    left: -.3em;
+    top: 50%;
+    font-size: 3.5em;
+    color: rgb(117, 117, 255);
+    transform: translateY(-50%);
+}
+
+.notification-section .video-information {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.notification-section .video-information p {
+    line-height: 1.3;
+    max-width: 55ch;
+}
+
+.notification-section .video-information span {
+    margin: .5rem 0;
+    color: hsl(0, 0%, 75%);
+    font-size: .8rem;
+}
+
+.notification-section .video-image {
+    min-width: 86px;
+    max-width: 86px;
+    height: 65px;
+    background-image: url(images/Illustration\ 1.jpg);
+    background-size: cover;
+    margin: 0 1rem;
+    background-color: red;
+    
+}
+
+.expand-dots {
+    position: absolute;
+    right: 1.5rem;
+    /* Why ? dont ask me */
+    min-width: 30px;
+    max-width: 30px;
+    min-height: 30px;
+    max-height: 30px;
+    /*                   */
+    border-radius: 50%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    display: none;
+}
+
+/* TODO - WHEN HOVERING OVER THIS SECTION REVEAL DOTS ! :) */
+
+.notification-section a:hover .expand-dots {
+    display: flex;
+}
+.dot {
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background-color: hsl(0, 0%, 75%);
+}
+
+.expand-dots:hover > * {
+    background-color: white;
+}
+
+/* --------------------------------------------------------------------------- */
