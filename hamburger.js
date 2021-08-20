@@ -11,16 +11,20 @@ document.onreadystatechange = () => {
 
         // Function declaritions 
         function clickAwayProfile(e) { 
+
             // Make sure user didn't click on the dropdown itself
             const profilePopUp = document.getElementsByClassName('fixed-profile-pop-up')[0]
             let result = profilePopUp.contains(e.target)
-            
 
-            console.log(profilePopUp)
             if (!e.target.matches('.channel-icon') && !profilePopUp.matches('.hidden') && !result) {
                 const profilePopUp = document.getElementsByClassName('fixed-profile-pop-up')[0]
                 profilePopUp.classList.toggle('hidden')
                 window.removeEventListener('click', clickAwayProfile)
+
+                // If appereance dropdown open -> close it
+                if (!appereanceDropdown.matches('.hidden')) {
+                    appereanceDropdown.classList.toggle('hidden')
+                }
             }
         }
 
@@ -47,6 +51,8 @@ document.onreadystatechange = () => {
                 window.removeEventListener('click', clickAwayCreate)
             }
         }
+
+
 
         function toggleDropdown(element, callBack, dropdown) {
             element.addEventListener('click', e => {
@@ -83,7 +89,6 @@ document.onreadystatechange = () => {
 
         profilePic.addEventListener('click', (e) => {
             const profilePopUp = document.getElementsByClassName('fixed-profile-pop-up')[0]
-            console.log(e.target)
             profilePopUp.classList.toggle('hidden')
             const dropDownElement = e.target
             window.addEventListener('click', clickAwayProfile)
@@ -94,6 +99,7 @@ document.onreadystatechange = () => {
 
         toggleDropdown(createIcon, clickAwayCreate, createDropdown)
         toggleDropdown(appsIcon, clickAwayApps, appsDropdown)
+
 
         // If User has less 650px wide window add extra icons to their screens:)
         if (window.innerWidth <= 650) {
@@ -107,6 +113,13 @@ document.onreadystatechange = () => {
             // Icon BG animations
         
         }
+
+        const appereanceDropdown = document.querySelector('.appereance-dropdown-link')
+        const appereanceWrapper = document.querySelector('.dropdown-content')
+
+        appereanceDropdown.addEventListener('click', () => {
+            appereanceDropdown.classList.toggle('hidden')
+        })
     }
 
 
@@ -131,7 +144,6 @@ document.onreadystatechange = () => {
     let pageHistory = []
 
     function displayButtons(items, wrapper, page, start, bLeftArrow = false, bReset = false) {
-        console.log('--------------------------------------------------------------------------------')
         // Keep track of the maxium buttons for late
         let buttonCount = items.length
         let bLastButton = false
@@ -145,7 +157,6 @@ document.onreadystatechange = () => {
             currentPage = 1
             counter = 0
         }
-        console.log(page)
 
         // store history of pages for later
         if (bLeftArrow){
@@ -154,7 +165,6 @@ document.onreadystatechange = () => {
             pageHistory.push(page)
         }
 
-        console.log(pageHistory)
         // Empty the wrapper
         wrapper.innerHTML = ""
 
@@ -177,7 +187,6 @@ document.onreadystatechange = () => {
         let index = buttonCountHistory.length - 1
         counter = buttonCountHistory[index]
 
-        console.log(counter)
 
         paginatedItems.some(element => {
             // Keep track how many buttons we added for later
@@ -198,7 +207,6 @@ document.onreadystatechange = () => {
         } else {
             buttonCountHistory.push(counter)
         }
-        console.log(buttonCountHistory)
 
         if (checkOverflow(wrapper)) {
             // If the last button is shown don't show right arrow anymore
@@ -252,7 +260,6 @@ document.onreadystatechange = () => {
 
     function resetDisplay(e) {
         displayButtons(intrestButtonsArray, intrestButtonsWrapper, currentPage, 0, false, true) 
-        console.log('I got called')
     }
 
 
@@ -293,7 +300,6 @@ function iconClick(element) {
     
     element.addEventListener('click', function(e) {
 
-        console.log(e.target)
         if (e.target.matches('.drop')) {
             // If user clicked inside the dropdown -> do nothing
             return

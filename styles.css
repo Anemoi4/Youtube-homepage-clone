@@ -946,8 +946,8 @@ body {
     top: 110%;
     z-index: 1;
 }
-
-.appereance-dropdown-link .dropdown-content.hidden{
+ 
+.appereance-dropdown-link.hidden .dropdown-content{
     display: none;
 } 
 
