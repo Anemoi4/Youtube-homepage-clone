@@ -11,9 +11,13 @@ document.onreadystatechange = () => {
 
         // Function declaritions 
         function clickAwayProfile(e) {
-            
+            // Make sure user didn't click on the dropdown itself
             const profilePopUp = document.getElementsByClassName('fixed-profile-pop-up')[0]
-            if (!e.target.matches('.channel-icon') && !profilePopUp.matches('.hidden')) {
+            let result = profilePopUp.contains(e.target)
+            
+
+            console.log(profilePopUp)
+            if (!e.target.matches('.channel-icon') && !profilePopUp.matches('.hidden') && !result) {
                 const profilePopUp = document.getElementsByClassName('fixed-profile-pop-up')[0]
                 profilePopUp.classList.toggle('hidden')
                 window.removeEventListener('click', clickAwayProfile)
@@ -79,6 +83,7 @@ document.onreadystatechange = () => {
 
         profilePic.addEventListener('click', (e) => {
             const profilePopUp = document.getElementsByClassName('fixed-profile-pop-up')[0]
+            console.log(e.target)
             profilePopUp.classList.toggle('hidden')
             const dropDownElement = e.target
             window.addEventListener('click', clickAwayProfile)
