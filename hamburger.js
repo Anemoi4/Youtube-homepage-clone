@@ -10,7 +10,7 @@ document.onreadystatechange = () => {
         const notifyDots = document.querySelectorAll('.expand-dots')
 
         // Function declaritions 
-        function clickAwayProfile(e) {
+        function clickAwayProfile(e) { 
             // Make sure user didn't click on the dropdown itself
             const profilePopUp = document.getElementsByClassName('fixed-profile-pop-up')[0]
             let result = profilePopUp.contains(e.target)

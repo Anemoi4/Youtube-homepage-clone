@@ -292,7 +292,7 @@ body {
 	color: white;
 	opacity: 0.9;
 	cursor: pointer;
-}
+} 
 
 .instest-btn {
 	display: none;
@@ -430,7 +430,7 @@ body {
 .channel-mode-option a:hover,
 .notification-section a:hover,
 .create-dropdown a:hover,
-.apps-dropdown .apps-row a:hover  {
+.apps-dropdown .apps-row a:hover {
     background: hsl(0, 0%, 30%);
 }
 
@@ -826,9 +826,12 @@ body {
 
 /* --------------------------- PROFILE POP UP STYLES ------------------------ */
 
+.fixed-profile-pop-up  {
+    background-color: hsl(0, 0%, 15%);
+}
+
 .fixed-profile-pop-up {
     position: fixed;
-    background-color: hsl(0, 0%, 15%);
     /* Sits right under user profile */
     top: 50px;
     right: .75rem;
@@ -847,7 +850,8 @@ body {
 .channel-links,
 .profile-information,
 .channel-settings,
-.channel-mode-option {
+.channel-mode-option,
+.appereance-dropdown-link .dropdown-content {
     border-bottom: 1px solid hsl(0, 0%, 40%);
     padding-bottom: .5rem;
     padding-top: .5rem;
@@ -911,6 +915,55 @@ body {
 .channel-links a img,
 .channel-settings a img {
     margin-right: .8rem;
+}
+
+/* APPEREANCE DROPDOWN */
+
+.appereance-dropdown-link {
+    position: relative;
+}
+
+.channel-settings .dropdown-arrow {
+    margin-right: 1rem;
+    font-size: 1.5rem;
+}
+
+.appereance-dropdown-wrapper {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.appereance-dropdown-link .dropdown-content {
+    position: absolute;
+    display: block;
+    background-color: hsl(0, 0%, 11%);
+    box-shadow: 2px 4px 8px hsl(0, 0%, 20%);
+    border: 1px solid white;
+    min-width: 300px;
+    left: -5%;
+    top: 110%;
+    z-index: 1;
+}
+
+.appereance-dropdown-link .dropdown-content.hidden{
+    display: none;
+} 
+
+.appereance-dropdown-link .dropdown-content .dark-theme-wrapper:hover,
+.appereance-dropdown-link .dropdown-content .light-theme-wrapper:hover {
+    background-color: hsl(0, 0%, 16%);
+}
+
+.appereance-dropdown-link .dropdown-content .dark-theme-wrapper,
+.appereance-dropdown-link .dropdown-content .light-theme-wrapper {
+    padding: .5rem 0 .5rem .75rem;
+    display: flex;
+}
+
+.appereance-dropdown-link .dropdown-content .light-theme-wrapper {
+    border-bottom: 1px solid hsl(0, 0%, 40%);
 }
 
 /* --------------------------------------------------------------------------- */
@@ -1029,8 +1082,6 @@ body {
     background-image: url(images/Illustration\ 1.jpg);
     background-size: cover;
     margin: 0 1rem;
-    background-color: red;
-    
 }
 
 .expand-dots {
