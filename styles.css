@@ -78,12 +78,25 @@ body,
 }
 
 .thumbnail {
+    position: relative;
     width: 100%;
     height: 200px;
     background-image: url('images/Illustration\ 1.jpg');
     background-size: cover;
     background-position: 0 -3rem;
     cursor: pointer;
+}
+
+.thumbnail::before {
+    content: attr(data-duration);
+    display: block;
+    position: absolute;
+    bottom: 3%;
+    right: 3%;
+    background-color: hsl(0, 0%, 15%);
+    padding: .2rem;
+    border-radius: 5px;
+    font-size: .75rem;
 }
 
 .video-bottom-section .video-metadata { 
