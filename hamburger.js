@@ -501,14 +501,51 @@ const intrestButtons = document.getElementsByClassName('sidenav-margin')[0]
 const classList = sidenav.classList
 const icons = document.getElementsByClassName('icons')[0];
 
+// Add lightbox for later use
+let lightbox = document.createElement('div')
+lightbox.id = 'light-box'
+lightbox.classList.add('hidden')
+document.body.appendChild(lightbox)
+
+
 // EVENT LISTENERS
 
 // MENU BUTTON
 menuButton.addEventListener('click', (event) => {
     
-    sidenav.classList.toggle('hidden')
-    navbarVisibilityCheck()
-    return
+    // TODO - Check if screen size is less than 650px if less than 650px don't move other content and add lighbox
+    if(window.innerWidth > 650) {
+        sidenav.classList.toggle('hidden')
+        navbarVisibilityCheck()
+        return
+    } else {
+        let clickAwayNav = (e) => {
+            if (e.currentTarget === e.target) {
+                sidenav.classList.add('hidden')
+                lightbox.classList.add('hidden')
+                lightbox.removeEventListener('click', clickAwayNav)
+            }
+        }
+
+        // Make sidenav appear on top
+        lightbox.removeEventListener('click', clickAwayNav)
+        sidenav.classList.toggle('hidden')
+        sidenav.style.zIndex = '3'
+        videoSection.style.marginLeft = '0px'
+        intrestButtons.style.left = 0;
+
+        
+
+        // reveal a lightbox
+        if (sidenav.matches('.hidden')) {
+            if (!lightbox.matches('.hidden')) {
+                lightbox.classList.add('hidden')
+            }
+        } else {
+            lightbox.classList.remove('hidden')
+            lightbox.addEventListener('click', clickAwayNav)
+        }
+    }
 });
 
 function iconClick(element) {
