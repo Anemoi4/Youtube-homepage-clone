@@ -130,8 +130,93 @@ document.onreadystatechange = () => {
         // Color themes
 
         darkTheme.addEventListener('click', (e) => {
-            
+            // Change the appereance text
+            document.querySelector('.color-theme-txt').textContent = 'Appereance: Dark'
+
+            // delete light theme styles if they exist
+
+            lightThemeStyles = document.getElementById('light-theme')
+            if (lightThemeStyles) {
+                lightThemeStyles.remove()
+            }
+
+            //
+            //// Revert all styles //////////////////
+
+            document.body.style.setProperty('--bg-dark', 'hsl(0, 0%, 17%)')
+            document.querySelector('.container').style.setProperty('--bg-dark', 'hsl(0, 0%, 17%)')
+            document.documentElement.style.setProperty('--text-color-dark', 'white')
+            document.querySelector('.video-section').style.setProperty('--bg-video-dark', 'hsl(0, 0%, 20%)')
+            document.querySelectorAll('.bar')[0].style.setProperty('--bar-color-dark', 'white')
+            document.querySelectorAll('.bar')[1].style.setProperty('--bar-color-dark', 'white')
+            document.querySelectorAll('.bar')[2].style.setProperty('--bar-color-dark', 'white')
+            document.querySelector('.search-icon').style.setProperty('--color-search-btn-dark', 'hsl(0, 0%, 22%)')
+
+            //
+            document.querySelector('#search-bar-input').style.setProperty('--bg-search-form-dark', 'hsl(0, 0%, 12%)')
+
+            // 
+            document.querySelector('.active').style.setProperty('--bg-intrest-button-dark', 'white')
+            document.querySelector('.active').style.setProperty('--color-intrest-button-dark', 'black')
+            document.querySelector('.fixed-sidenav').style.setProperty('--bg-sidenav-dark', 'hsl(0, 0%, 18%)')
+
+            // Add new styles to all dropdowns
+
+            let bgDropdowns = document.querySelectorAll('.bg-dropdown')
+            bgDropdowns.forEach(dropdown => {
+                dropdown.style.setProperty('--bg-dropdown-dark', 'hsl(0, 0%, 15%)')
+            })
+
+            //
+            document.querySelector('.dropdown-content').style.setProperty('--bg-lightmode-dark', 'hsl(0, 0%, 11%)')
+
+            // Change color of all the intrest buttons and add border
+
+            let instrestButtons = document.querySelectorAll('.instest-btn')
+            instrestButtons.forEach(button => {
+                button.style.setProperty('--bg-link-dark-hover', 'hsl(0, 0%, 30%)')
+            })
+
+            // Add specific color to all elements in profile dropdown
+
+            let profileColorDrops = document.querySelectorAll('.color-profile-drop')
+            profileColorDrops.forEach(drop => {
+                drop.style.setProperty('--channel-links-dark', 'hsl(0, 0, 80%)')
+            })
+
+            //
+
+             // Remove borders for search bar input field and search button
+
+             document.querySelector('#search-bar-input').style.border = 'none'
+             document.querySelector('.search-icon').style.border = 'none'
+
+            //
+            document.querySelector('#sidenav-active').style.setProperty('--bg-link-dark-hover', 'hsl(0, 0%, 30%)')
+
+            // Change icon filters for light theme
+            let whiteIcons = document.querySelectorAll('.filter-white')
+            let grayIcons = document.querySelectorAll('.filter-gray')
+
+            whiteIcons.forEach(icon => {
+                if (!icon.matches('.pure-white')) {
+                    icon.classList.remove('filter-black')
+                }
+            })
+
+            grayIcons.forEach(icon => {
+                icon.classList.remove('filter-black')
+            })
+
+            // Change all metadata colors
+            let metaDatas = document.querySelectorAll('.video-metadata')
+            metaDatas.forEach(meta => {
+                meta.style.setProperty('--color-video-metadata-dark', 'hsl(0, 0%, 80%)')
+            })
+
         })
+
+////////////////////////////////////////////////////////////////////////////////////
 
         lightTheme.addEventListener('click', (e) => {
             document.body.style.setProperty('--bg-dark', 'white')

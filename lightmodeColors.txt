@@ -33,7 +33,7 @@
 --bg-lightmode-dark = hsl(0, 0%, 11%); 
 --color-intrest-button-dark = black; 
  --channel-links-dark = hsl(0, 0%, 80%); 
- --color-video-metadata-dark = hsl(0, 0%, 80%); 
+ --color-video-metadata-dark = hsl(0, 0%, 80%); X 
   --color-video-metadata-dark-hover: hsl(0, 0%, 65%); 
 
 
