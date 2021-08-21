@@ -2,12 +2,17 @@
 
 // Make sure document has loaded
 document.onreadystatechange = () => {
+
     if (document.readyState === 'complete') {
         const createIcon = document.getElementsByClassName('create-icon')[0]
         const appsIcon = document.querySelector('.apps-icon')
         const notifyIcon = document.querySelector('.notify-icon')
         const micIcon = document.querySelector('.voice-search')
         const notifyDots = document.querySelectorAll('.expand-dots')
+        const lightTheme = document.querySelector('.light-theme-wrapper')
+        const darkTheme = document.querySelector('.dark-theme-wrapper')
+
+
 
         // Function declaritions 
         function clickAwayProfile(e) { 
@@ -77,7 +82,8 @@ document.onreadystatechange = () => {
         iconClick(notifyIcon)
         iconClick(micIcon)
         
-        // EVENT LISTENERS
+        ///////// EVENT LISTENERS ////////////////////////////////////////
+
         // PROFILE POP UP
         const profilePic = document.getElementById('profile-pic')
 
@@ -120,6 +126,143 @@ document.onreadystatechange = () => {
         appereanceDropdown.addEventListener('click', () => {
             appereanceDropdown.classList.toggle('hidden')
         })
+
+        // Color themes
+
+        darkTheme.addEventListener('click', (e) => {
+            
+        })
+
+        lightTheme.addEventListener('click', (e) => {
+            document.body.style.setProperty('--bg-dark', 'white')
+            document.querySelector('.container').style.setProperty('--bg-dark', 'white')
+            document.documentElement.style.setProperty('--text-color-dark', 'black')
+            document.querySelector('.video-section').style.setProperty('--bg-video-dark', 'hsl(0, 0%, 97%)')
+            document.querySelectorAll('.bar')[0].style.setProperty('--bar-color-dark', 'hsl(0, 0%, 40%)')
+            document.querySelectorAll('.bar')[1].style.setProperty('--bar-color-dark', 'hsl(0, 0%, 40%)')
+            document.querySelectorAll('.bar')[2].style.setProperty('--bar-color-dark', 'hsl(0, 0%, 40%)')
+            document.querySelector('.search-icon').style.setProperty('--color-search-btn-dark', 'hsl(0, 0%, 75%)')
+
+            // Change the hover effect for search button
+            let buttonCss = '.main-header form button:hover { background: hsl(0, 0%, 70%);}'
+            let style = document.createElement('style')
+            style.id = 'light-theme'
+
+            if (style.styleSheet) {
+                style.styleSheet.cssText = buttonCss
+            } else {
+                style.appendChild(document.createTextNode(buttonCss))
+            }
+
+            document.querySelector('head').appendChild(style)
+
+            //
+            document.querySelector('#search-bar-input').style.setProperty('--bg-search-form-dark', 'hsl(0, 0%, 96%)')
+
+            // Add borders for search bar input field and search button
+
+            document.querySelector('#search-bar-input').style.border = '1px solid hsl(0, 0%, 40%, 0.5)'
+            document.querySelector('.search-icon').style.border = '1px solid hsl(0, 0%, 40%, 0.5)'
+
+            // 
+            document.querySelector('.active').style.setProperty('--bg-intrest-button-dark', 'black')
+            document.querySelector('.active').style.setProperty('--color-intrest-button-dark', 'white')
+            document.querySelector('.fixed-sidenav').style.setProperty('--bg-sidenav-dark', 'white')
+
+            // Add new styles to all dropdowns
+
+            let bgDropdowns = document.querySelectorAll('.bg-dropdown')
+            bgDropdowns.forEach(dropdown => {
+                dropdown.style.setProperty('--bg-dropdown-dark', 'white')
+            })
+
+            //
+            document.querySelector('.dropdown-content').style.setProperty('--bg-lightmode-dark', 'white')
+
+            // Change color of all the intrest buttons and add border
+
+            let instrestButtons = document.querySelectorAll('.instest-btn')
+            instrestButtons.forEach(button => {
+                button.style.setProperty('--bg-link-dark-hover', 'hsl(0, 0%, 90%)')
+                button.style.border = '1px solid hsl(0, 0%, 40%, 0.3)'
+            })
+
+            // Add specific color to all elements in profile dropdown
+
+            let profileColorDrops = document.querySelectorAll('.color-profile-drop')
+            profileColorDrops.forEach(drop => {
+                drop.style.setProperty('--channel-links-dark', 'black')
+            })
+
+            //
+            // Change the color theme text value
+
+            document.querySelector('.color-theme-txt').textContent = 'Appereance: Light'
+
+            //
+            document.querySelector('#sidenav-active').style.setProperty('--bg-link-dark-hover', 'hsl(0, 0%, 80%)')
+
+            // Change all hover so lightmode appropriate
+
+            let hoverCss = `.fixed-sidenav a:hover,
+                            .channel-links a:hover,
+                            .channel-settings a:hover,
+                            .channel-mode-option a:hover,
+                            .notification-section a:hover,
+                            .create-dropdown a:hover,
+                            .apps-dropdown .apps-row a:hover,
+                            .intrest-buttons button,
+                            .appereance-dropdown-link .dropdown-content .dark-theme-wrapper:hover,
+                            .appereance-dropdown-link .dropdown-content .light-theme-wrapper:hover {
+                                --bg-link-dark-hover: hsl(0, 0%, 80%);
+                                background: var(--bg-link-dark-hover);
+                            }`
+
+            if (style.styleSheet) {
+                style.styleSheet.cssText = hoverCss
+            } else {
+                style.appendChild(document.createTextNode(hoverCss))
+            }
+
+            // 
+            // Change icon filters for light theme
+            let whiteIcons = document.querySelectorAll('.filter-white')
+            let grayIcons = document.querySelectorAll('.filter-gray')
+
+            whiteIcons.forEach(icon => {
+                if (!icon.matches('.pure-white')) {
+                    icon.classList.add('filter-black')
+                }
+            })
+
+            grayIcons.forEach(icon => {
+                icon.classList.add('filter-black')
+            })
+
+            // 
+            // Change all metadata colors
+            let metaDatas = document.querySelectorAll('.video-metadata')
+            metaDatas.forEach(meta => {
+                meta.style.setProperty('--color-video-metadata-dark', 'hsl(0, 0%, 60%)')
+            })
+
+            // 
+            // Change the hove effects for metadata
+            let metaCss = `.video-metadata a:hover > * {
+                            --color-video-metadata-dark-hover: hsl(0, 0%, 30%);
+                            color: var(--color-video-metadata-dark-hover);
+                        }`
+
+            if (style.styleSheet) {
+                style.styleSheet.cssText = metaCss
+            } else {
+                style.appendChild(document.createTextNode(metaCss))
+            }
+
+            //
+        })
+        
+        ////////////////////////////////////////////////////////////////////////////////////////////
     }
 
 

@@ -1,0 +1,40 @@
+------------ WHITE -----------------------------
+
+--text-color-light = black;
+--bg-light         = white
+--bg-video-light   = hsl(0, 0%, 97%);
+--bar-color-light  = hsl(0, 0%, 40%); 
+--color-search-btn-light = hsl(0, 0%, 75%); 
+--color-search-btn-light-hover = hsl(0, 0%, 70%); 
+--bg-search-form-light = hsl(0, 0%, 96%); 
+--bg-intrest-button-light = black 
+--bg-sidenav-light = white 
+--bg-dropdown-light = white 
+--bg-lightmode-light = white 
+--color-intrest-button-light = white 
+ --channel-links-light = black 
+ --color-video-metadata-dark = hsl(0, 0%, 60%); 
+  --color-video-metadata-light-hover: hsl(0, 0%, 50%); 
+
+
+ -------------------------------------------------
+
+------------ DARK --------------------------------
+--text-color-dark = white;
+--bg-dark         = hsl(0, 0%, 17%);
+--bg-video-dark   = hsl(0, 0%, 20%);
+--bar-color-dark  = white               
+--color-search-btn-dark = hsl(0, 0%, 22%); 
+--color-search-btn-dark-hover = hsl(0, 0%, 26%); 
+--bg-search-form-dark = hsl(0, 0%, 12%); 
+--bg-intrest-button-dark = white X
+--bg-sidenav-dark = hsl(0, 0%, 18%); 
+--bg-dropdown-dark = hsl(0, 0%, 15%); 
+--bg-lightmode-dark = hsl(0, 0%, 11%); 
+--color-intrest-button-dark = black; 
+ --channel-links-dark = hsl(0, 0%, 80%); 
+ --color-video-metadata-dark = hsl(0, 0%, 80%); 
+  --color-video-metadata-dark-hover: hsl(0, 0%, 65%); 
+
+
+-------------------------------------------------

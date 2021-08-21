@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="styles.css">
     <script src="hamburger.js" defer></script>
     <title>Reeniä</title>
+
 </head>
 <body>
     <header class="main-header">
@@ -19,7 +20,7 @@
             <a href="#">
                 <img src="images/logo.png" alt="logo" class="brand-logo filter-white">
             </a>
-        </div>
+        </div> 
         <div class="search-bar">
             <form id="search-bar-form">
                 <input id="search-bar-input" type="search" placeholder="Search...">
@@ -29,14 +30,14 @@
             </form>
             <div class="voice-search-icon-wrapper">
                 <div id="voice-search-icon" data-tooltip-voice="search with your voice" class="voice-search">
-                    <img src="images/mic_black_24dp.svg" alt="mircophone" class="filter-white">
+                    <img src="images/mic_black_24dp.svg" alt="mircophone" class="filter-white pure-white">
                 </div>
             </div>
         </div>
         <div class="icons">
             <div style="order: 3;" data-tooltip-create="Create" class="icon create-icon hidden">
-                <img class="filter-white"  src="images/video-plus.svg" alt="">
-                <div class="create-dropdown drop">
+                <img class="filter-white" src="images/video-plus.svg" alt="">
+                <div class="create-dropdown drop bg-dropdown">
                     <div class="create-row">
                         <a href="#">
                             <img class="filter-gray" src="images/live_tv_black_24dp.svg" alt="">
@@ -53,7 +54,7 @@
             </div>
             <div style="order: 4;" data-tooltip-apps="Youtube apps" class="icon apps-icon hidden">
                 <img class="filter-white" src="images/apps.svg" alt="">
-                <div class="apps-dropdown drop">
+                <div class="apps-dropdown drop bg-dropdown">
                     <div class="apps-section drop">
                         <div class="apps-row">
                             <a href="#">
@@ -102,7 +103,7 @@
             </div>
         </div>
     </header>
-    <div class="fixed-profile-pop-up dropdown hidden">
+    <div class="fixed-profile-pop-up dropdown hidden bg-dropdown">
     <div class="profile-information">
         <div class="profile-picture"></div>
         <div class="profile-name">
@@ -110,50 +111,50 @@
             <a href="#">Manage your Google Account</a>
         </div>
     </div>
-        <div class="channel-links">
+        <div class="channel-links color-profile-drop">
             <nav>
                 <ul>
                     <li>
-                        <a href="#">
+                        <a href="#" class="channel-drop-color">
                             <img class="filter-gray" src="images/account_circle_black_24dp.svg" alt="">
-                            <p>Your channel</p> 
+                            <p class="channel-drop-color">Your channel</p> 
                         </a>
                     </li>
                     <li>
-                        <a href="#">
+                        <a href="#" class="channel-drop-color">
                             <img class="filter-gray" src="images/monetization_on_black_24dp.svg" alt="">
-                           <p>Purchases and memberships</p>
+                           <p class="channel-drop-color">Purchases and memberships</p>
                         </a>
                     </li>
                     <li>
-                        <a href="#">
+                        <a href="#" class="channel-drop-color">
                             <img class="filter-gray" src="images/settings_black_24dp.svg" alt="">
-                            <p>Youtube Studio</p>
+                            <p class="channel-drop-color">Youtube Studio</p>
                         </a>
                     </li>
                     <li>
                         <a href="#">
                             <img class="filter-gray" src="images/switch_account_black_24dp.svg" alt="">
-                            <p>Switch account</p>
+                            <p class="channel-drop-color">Switch account</p>
                         </a>
                     </li>
                     <li>
-                        <a href="#">
+                        <a href="#" class="channel-drop-color">
                             <img class="filter-gray" src="images/logout_black_24dp.svg" alt="">
-                            <p>Sign out</p>
+                            <p class="channel-drop-color">Sign out</p>
                         </a>
                     </li>
                 </ul>
             </nav>
         </div>
-        <div class="channel-settings">
+        <div class="channel-settings color-profile-drop">
             <nav>
                 <ul>
                     <li>
-                        <a href="#" class="appereance-dropdown-link hidden">
+                        <a href="#" class="appereance-dropdown-link hidden channel-drop-color">
                                 <img class="filter-gray" src="images/brightness_6_black_24dp.svg" alt="">
                                 <div class="appereance-dropdown-wrapper">
-                                    <p>Appereance: Dark</p>
+                                    <p class="color-theme-txt">Appereance: Dark</p>
                                     <p class="dropdown-arrow">&#8594;</p>
                                 </div>
                                 <div class="dropdown-content">
@@ -169,63 +170,63 @@
                         </a>
                     </li>
                     <li>
-                        <a href="#">
+                        <a href="#" class="channel-drop-color">
                             <img class="filter-gray" src="images/translate_black_24dp.svg" alt="">
-                            <p>Language: English</p>
+                            <p class="channel-drop-color">Language: English</p>
                         </a>
                     </li>
                     <li>
-                        <a href="#">
+                        <a href="#" class="channel-drop-color">
                             <img class="filter-gray" src="images/location_black_24dp.svg" alt="">
-                            <p>Location: unknown</p>
+                            <p class="channel-drop-color">Location: unknown</p>
                         </a>
                     </li>
                     <li>
-                        <a href="#">
+                        <a href="#" class="channel-drop-color">
                             <img class="filter-gray" src="images/settings_black_24dp.svg" alt="">
-                            <p>Settings</p>
+                            <p class="channel-drop-color">Settings</p>
                         </a>
                     </li>
                     <li>
-                        <a href="#">
+                        <a href="#" class="channel-drop-color">
                             <img class="filter-gray" src="images/data_good_black_24dp.svg" alt="">
-                            <p>Your data in Youtube</p>
+                            <p class="channel-drop-color">Your data in Youtube</p>
                         </a>
                     </li>
                     <li>
                         <a href="#">
                             <img class="filter-gray" src="images/help_black_24dp.svg" alt="">
-                            <p>Help</p>
+                            <p class="channel-drop-color">Help</p>
                         </a>
                     </li>
                     <li>
-                        <a href="#">
+                        <a href="#" class="channel-drop-color">
                             <img class="filter-gray" src="images/feedback_black_24dp.svg" alt="">
-                            <p>Send feedback</p>
+                            <p class="channel-drop-color">Send feedback</p>
                         </a>
                     </li>
                     <li>
-                        <a href="#">
+                        <a href="#" class="channel-drop-color">
                             <img class="filter-gray" src="images/keyboard_black_24dp.svg" alt="">
-                            <p>Keyboard shortcuts</p>
+                            <p class="channel-drop-color">Keyboard shortcuts</p>
                         </a>
                     </li>
                 </ul>
             </nav>
         </div>
-        <div class="channel-mode-option">
+        <div class="channel-mode-option color-profile-drop">
             <nav>
                 <ul>
                     <li>
-                        <a href="#">
-                            <p>Restricted Mode: Off</p>
+                        <a href="#" class="channel-drop-color">
+                            <p class="channel-drop-color">Restricted Mode: Off</p>
                         </a>
                     </li>
                 </ul>
             </nav>
         </div>
     </div>
-    <div class="notification-pop-up dropdown hidden">
+    <div class="notification-pop-up dropdown hidden bg-dropdown">
         <div class="notification-header">
             <div class="title">
                 <span>Notifications</span>
@@ -329,8 +330,8 @@
     </div>
     <div class="intrest-buttons">
         <div class="container sidenav-margin">
-            <div class="overflow-btn-left">&#8592;</div>
-            <div class="overflow-btn-right">&#8594;</div>
+            <div class="overflow-btn-left bg-dropdown">&#8592;</div>
+            <div class="overflow-btn-right bg-dropdown">&#8594;</div>
             <button class="active instest-btn">intrest 1</button>
             <button class="instest-btn">intrest 2</button>
             <button class="instest-btn">intrest 3</button>
@@ -368,7 +369,7 @@
         <nav class="sidenav-links">
             <ul>
                 <li class="home-link">
-                    <a class="active" href="#">
+                    <a id="sidenav-active" class="active" href="#">
                         <img class="filter-white" src="images/home_black_24dp.svg" alt="bell-icon">
                         <p>Home</p>
                     </a>

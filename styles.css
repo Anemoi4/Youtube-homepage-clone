@@ -1,18 +1,23 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
-*, *::after, *::before {
+:root {
     --text-color-dark: white;
+    color: var(--text-color-dark);
+}
+
+*, *::after, *::before {
+    color: var(--text-color-dark);
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    color: var(--text-color-dark);
     font-family: Roboto, sans-serif;
 }
+
 
 body, 
 .intrest-buttons .container {
     --bg-dark: hsl(0, 0%, 17%);
-    background: var(--bg-dark)
+    background: var(--bg-dark);
 }
 
 .video-section {
@@ -90,7 +95,8 @@ body,
 }
 
 .video-metadata a:hover > * {
-    color: hsl(0, 0%, 65%);;
+    --color-video-metadata-dark-hover: hsl(0, 0%, 65%);
+    color: var(--color-video-metadata-dark-hover);
 }
 
 .video-metadata h1 {
@@ -98,10 +104,14 @@ body,
     font-size: 1.5rem;
 }
 
+.video-metadata {
+    --color-video-metadata-dark: hsl(0, 0%, 80%);
+}
+
 .video-metadata .channel-name,
 .video-metadata .video-views,
 .video-metadata .video-release-date {
-    color: hsl(0, 0%, 80%);
+    color: var(--color-video-metadata-dark);
     font-size: 1.1rem;
 }
 
@@ -267,6 +277,10 @@ body,
 
 .filter-gray {
     filter: invert(56%) sepia(0%) saturate(502%) hue-rotate(203deg) brightness(90%) contrast(77%);
+}
+
+.filter-black {
+    filter: brightness(0) saturate(100%) invert(0%) sepia(0%) saturate(0%) hue-rotate(148deg) brightness(95%) contrast(103%);
 }
 
 /* --------------------------------------------------------------------- */
@@ -449,7 +463,7 @@ body,
 .apps-dropdown .apps-row a:hover,
 .intrest-buttons button {
     --bg-link-dark-hover: hsl(0, 0%, 30%);
-    background: hsl(0, 0%, 30%);
+    background: var(--bg-link-dark-hover);
 }
 
 .fixed-sidenav li {
@@ -929,10 +943,17 @@ body,
     align-items: center;
 }
 
+.channel-links,
+.channel-settings,
+.channel-mode-option {
+    --channel-links-dark: hsl(0, 0, 80%);
+    color: var(--channel-links-dark);
+}
+
 .channel-links a p,
 .channel-settings a p,
 .channel-mode-option a p {
-    color: hsl(0, 0%, 80%);
+    color: var(--channel-links-dark)
 }
 
 .channel-links a img,
