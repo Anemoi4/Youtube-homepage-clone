@@ -1164,8 +1164,6 @@ body,
     display: none;
 }
 
-/* TODO - WHEN HOVERING OVER THIS SECTION REVEAL DOTS ! :) */
-
 .notification-section a:hover .expand-dots {
     display: flex;
 }

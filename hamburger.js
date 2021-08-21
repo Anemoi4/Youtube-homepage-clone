@@ -1,5 +1,3 @@
-// BUGS 
-
 // Make sure document has loaded
 document.onreadystatechange = () => {
 
@@ -513,7 +511,7 @@ document.body.appendChild(lightbox)
 // MENU BUTTON
 menuButton.addEventListener('click', (event) => {
     
-    // TODO - Check if screen size is less than 650px if less than 650px don't move other content and add lighbox
+    // Check if screen size is less than 650px if less than 650px don't move other content and add lighbox
     if(window.innerWidth > 650) {
         sidenav.classList.toggle('hidden')
         navbarVisibilityCheck()
@@ -630,8 +628,8 @@ function searchIconEL() {
       imgWrapper.appendChild(img)
       searchBar.insertBefore(imgWrapper, searchForm)
 
-      // If user click anything else than the searchbar make it go away || TODO maybe add EL to anything else?
-      // If user clisk on back arrow || Weak :(
+      
+      // If user clisk on back arrow 
       img.addEventListener('click', event => {
           // Revert all styles
           searchBar.style.display = 'none'
