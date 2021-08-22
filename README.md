@@ -8,6 +8,7 @@ The project is hosted on heroku: _<a href="https://youtube-homepage-clone.heroku
 * Dynamic intrest buttons pagination 
 * Responsive content based on screensize (e.g if screen size is > 650px sidenav behaves differently)
 * Server has been made with node.js and express
+* It has tooltips for all the icons
 
 ### To run the project 
 ```bash
