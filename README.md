@@ -2,7 +2,7 @@
 ---
 
 ## About the project
-The project is hosted on heroku: _"<a href="https://youtube-homepage-clone.herokuapp.com/home" target="_blank">Website</a>"_
+The project is hosted on heroku: _<a href="https://youtube-homepage-clone.herokuapp.com/home" target="_blank">Website</a>_
 * It has dropdown functionality
 * Light and dark theme
 * Dynamic intrest buttons pagination 
