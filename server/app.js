@@ -1,7 +1,8 @@
 import express from 'express'
 
+const PORT = process.env.PORT || 5000
 const app = express()
-app.listen(5000, () => console.log('Listening at 5000'))
+app.listen(PORT, () => console.log('Listening at 5000'))
 
 // View engine
 app.set('view engine', 'ejs')
